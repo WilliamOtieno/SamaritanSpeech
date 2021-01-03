@@ -2,6 +2,7 @@ import speech_recognition as sr
 import webbrowser
 from time import ctime
 import time
+import playsound
 
 r = sr.Recognizer()
 

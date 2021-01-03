@@ -3,6 +3,7 @@ chardet==4.0.0
 click==7.1.2
 gTTS==2.2.1
 idna==2.10
+playsound==1.2.2
 PyAudio==0.2.11
 requests==2.25.1
 six==1.15.0
