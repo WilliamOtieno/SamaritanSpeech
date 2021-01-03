@@ -43,6 +43,9 @@ def respond(voice_data):
         webbrowser.get().open(url)
         print('Here is the location of' + location)
 
+    if 'exit' in voice_data:
+        exit()
+
 
 time.sleep(1)
 print("How can I help you?")
