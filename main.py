@@ -1,11 +1,14 @@
 import speech_recognition as sr
+import webbrowser
 from time import ctime
 
 r = sr.Recognizer()
 
 
-def record_audio():
+def record_audio(ask=False):
     with sr.Microphone() as source:
+        if ask:
+            print(ask)
         audio = r.listen(source)
         voice_data = ''
 
@@ -26,6 +29,18 @@ def respond(voice_data):
 
     if 'what time is it' in voice_data:
         print(ctime())
+
+    if 'search' in voice_data:
+        search = record_audio('What do you want to search for?')
+        url = 'https://google.com/search?q=' + search
+        webbrowser.get().open(url)
+        print('Here is what I found for' + search)
+
+    if 'find location' in voice_data:
+        location = record_audio('What is the location?')
+        url = 'https://google.nl/maps/place' + location + '/&amp;'
+        webbrowser.get().open(url)
+        print('Here is the location of' + location)
 
 
 print("How can I help you?")
