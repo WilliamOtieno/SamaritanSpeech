@@ -5,6 +5,8 @@ gTTS==2.2.1
 idna==2.10
 playsound==1.2.2
 PyAudio==0.2.11
+pycairo==1.20.0
+PyGObject==3.38.0
 requests==2.25.1
 six==1.15.0
 SpeechRecognition==3.8.1
