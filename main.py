@@ -10,7 +10,7 @@ from gtts import gTTS
 r = sr.Recognizer()
 
 
-def record_audio(ask=False):
+def record_audio(*ask):
     with sr.Microphone() as source:
         if ask:
             samaritan_speak(ask)
